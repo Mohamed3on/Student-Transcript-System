@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 200px;
+}
+
+header {
+    height: 200px;
+    background: crimson;
+}
+
+.main-nav,
+.main {
+    position: relative;
+}
+
+.main-nav {
+    background: #fff;
+    height: 80px;
+    z-index: 150;
+    margin-bottom: -80px;
+    font-size: xx-large;
+    text-align: center;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+}
+
+#navItems {
+    padding-top: 15px;
+}
+
+.navLink {
+    padding: 0px 20px 0px 20px;
+    text-decoration: none;
+}
+
+header,
+.main-nav-scrolled {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.main {
+    background: #f2f2e8;
+    padding: 110px 50px 50px;
+}
+
+.login {
+    display: block;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    padding: 0px 0px 10px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.usernamePass,
+#loginButton {
+    width: 300px;
+    text-align: center;
+}
+
+.usernamePass {
+    height: 30px;
+}
+
+#loginButton {
+    height: 75px;
+}
