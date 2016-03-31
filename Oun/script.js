@@ -33,36 +33,29 @@ function CheckChecked() {
     var table = document.getElementById("GradesTable");
     document.getElementById("modules").innerHTML = "";
     for (i = 1; i < table.rows.length; i++) {
-        var $row = $(table.rows[i].cells[2]).text();
-        if ($("#checkbox" + i).is(":checked"))
-            $("#modules").append("<li>" + $row + "</li>");
 
+        if ($("#checkbox" + i).is(":checked")) {
+            var $row = $("#checkbox" + i).closest('tr').index();
+            $row+=3;
+            var $data=$(table.rows[$row].cells[2]).text();
+            $("#modules").append("<li>" + $data + "</li>");
+        }
     }
 
-}
-function CheckCheckedOnClick() {
 
-    $(".checkbox").click(function () {
-            var table = document.getElementById("GradesTable");
-            document.getElementById("modules").innerHTML = "";
-            for (i = 1; i < table.rows.length; i++) {
-                var $row = $(table.rows[i].cells[2]).text();
-                if ($("#checkbox" + i).is(":checked"))
-                    $("#modules").append("<li>" + $row + "</li>");
-
-
-            }
-        }
-    );
 }
 function getAverage() {
     {
         var table = document.getElementById("GradesTable");
         var count = 0, sum = 0, average;
         for (i = 1; i < table.rows.length; i++) {
-            var $row = $(table.rows[i].cells[6]).text();
-            var num = parseInt($row);
+
+
             if ($("#checkbox" + i).is(":checked")) {
+                var $row = $("#checkbox" + i).closest('tr').index();
+                $row+=3;
+                var $data=$(table.rows[$row].cells[6]).text();
+                var num = parseInt($data);
                 count++;
                 sum += num;
             }
@@ -75,6 +68,25 @@ function getAverage() {
 
     }
 }
+function CheckCheckedOnClick() {
+
+    $(".checkbox").click(function () {
+            var table = document.getElementById("GradesTable");
+            document.getElementById("modules").innerHTML = "";
+            for (i = 1; i < table.rows.length; i++) {
+
+                if ($("#checkbox" + i).is(":checked")) {
+                    var $row = $("#checkbox" + i).closest('tr').index();
+                    $row+=3;
+                    var $data=$(table.rows[$row].cells[2]).text();
+                    $("#modules").append("<li>" + $data + "</li>");
+                }
+            }
+        getAverage();
+        }
+    );
+}
+
 $(document).ready(function () {
 
     $('#GradesTable').DataTable({"bLengthChange": false,
@@ -83,9 +95,6 @@ $(document).ready(function () {
         "paging": false
     });
     addCheckbox();
-    $("#average").click(function () {
-        getAverage();
-    });
     $("#selectAll").click(function () {
         $(".checkbox").prop('checked', $(this).prop("checked"));
         CheckChecked();
