@@ -24,7 +24,10 @@
         <div class="variable">Faculty:</div>
         <div class="userinfo" id="faculty"></div>
         <br><br>
-        <table id="GradesTable">
+        <table class="gradesTable" id="GradesTable">
+            <tr id="semester">
+                <th colspan="8">Semester 1</th>
+            </tr>
             <tr id="TableHeader">
                 <th>Module Code</th>
                 <th>Module Name</th>
@@ -62,61 +65,73 @@
                 <td>Yes</td>
             </tr>
             <tr id="row3">
-                <td> 15CSCI01I</td>
-                <td> Analysis of Algorithms</td>
+                <td> 15CSCI03I</td>
+                <td> Operating Systems</td>
                 <td>10</td>
                 <td>
-                    Unseen Exam 92<br>
-                    Group assignment 92<br>
                     Class Test 95<br>
+                    Lab Exam 75<br>
+                    Unseen Exam 76<br>
+
                 </td>
                 <td>A+</td>
-                <td>93</td>
+                <td>80</td>
                 <td>Yes</td>
             </tr>
+
             <tr id="row4">
-                <td> 15CSCI01I</td>
-                <td> Analysis of Algorithms</td>
+                <td> 15CSCI10I</td>
+                <td>Computer Architecture</td>
                 <td>10</td>
                 <td>
-                    Unseen Exam 92<br>
-                    Group assignment 92<br>
-                    Class Test 95<br>
+                    Unseen Exam 76<br>
+                    Assignments 85
+                    <br>
                 </td>
                 <td>A+</td>
-                <td>93</td>
+                <td>80</td>
                 <td>Yes</td>
             </tr>
             <tr id="row5">
                 <td> 15CSCI01I</td>
-                <td> Analysis of Algorithms</td>
+                <td>Systems Analysis and Design</td>
                 <td>10</td>
                 <td>
-                    Unseen Exam 92<br>
-                    Group assignment 92<br>
-                    Class Test 95<br>
+
+                    Group Term Project 75<br>
+                    Lab Exam 93
+                    <br>
                 </td>
                 <td>A+</td>
-                <td>93</td>
+                <td>80</td>
                 <td>Yes</td>
             </tr>
             <tr id="row6">
-                <td> 15CSCI01I</td>
-                <td> Analysis of Algorithms</td>
+                <td> 15CSCI08I</td>
+                <td>Software Project Management</td>
                 <td>10</td>
                 <td>
-                    Unseen Exam 92<br>
-                    Group assignment 92<br>
-                    Class Test 95<br>
+                    Unseen Exam 79<br>
+                    Group Term Project 76
+                    <br>
                 </td>
                 <td>A+</td>
-                <td>93</td>
+                <td>78</td>
                 <td>Yes</td>
             </tr>
         </table>
     </div>
-  <ul> <div id="modules"></div></ul>
-    <div class="variable" >Average: </div><div class="userinfo" id="averageResult"></div><br>
+    <form style="text-align:center">
+        <p><input type="radio" name="SelectAllNone" id="selectAll"> Select All
+            <input type="radio" name="SelectAllNone" id="selectNone"> Select None
+        </p>
+    </form>
+    <ul>
+        <div id="modules"></div>
+    </ul>
+    <div class="variable">Average:</div>
+    <div class="userinfo" id="averageResult"></div>
+    <br>
     <br><input type="submit" value="Get Average" id="average">
 </div>
 </body>
