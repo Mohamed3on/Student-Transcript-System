@@ -42,6 +42,11 @@ body {
 	color: white; 
 }
 
+#nav li #logout:hover {
+	background-color: #C11923;
+	color: white; 
+}
+
 #nav ul {
 	list-style-type: none;
     display: inline-block;
