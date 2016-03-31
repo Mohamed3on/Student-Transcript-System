@@ -1,0 +1,244 @@
+body {
+	margin:48px 0px 0px 64px;
+}
+
+.box {
+	width:350px;
+	margin-bottom: 20px;
+	text-align: center;
+	background: #eee;
+	border:1px solid #ccc;
+	padding: 0 10px 0 20px;
+
+}
+
+#nav {
+	top:0px;
+	right:20px;
+	left:20px;
+	position:fixed;
+	background: #eee;
+	border:1px solid #ccc;
+	padding: 0 10px 0 20px;
+}
+#nav li {
+	float: left;
+	padding-top: 5px;
+	padding-left:5px; 
+}
+#nav li a {
+	font-family: 'PT Sans', 'sans-serif', 'Arial', 'Times New Roman' ;
+	font-style: normal;
+	font-size: xx-large;
+	display: inline;
+	padding: 15px 15px 15px 15px;
+	float: right;
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+}
+#nav li a:hover {
+	background-color: #084B8C;
+	color: white; 
+}
+
+#nav ul {
+	list-style-type: none;
+    display: inline-block;
+    float: right;
+    margin-top: 70px;
+}
+
+#logo {
+ 	display: inline;
+}
+
+#container{
+	margin:auto;
+	overflow:auto; 
+	padding:160px 0; 
+	width:940px;
+}
+
+#footer {
+	padding: 0 10px;
+	background:#EEE;
+	bottom:0px;
+	right:0px;
+	left:0px;
+	position:fixed;
+	}
+#footer p {
+	margin: 0;
+	padding: 10px 0;
+}
+
+.title {
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: normal;
+	color: #ff7f1f;
+    margin: 15px 0 15px;
+    font-family: 'Ubuntu' , 'PT Sans', 'sans-serif', 'Arial', 'Times New Roman'  ; 
+}
+
+ .paragraph {
+ font-family:  'Abel','Ubuntu' , 'sans-serif', 'Arial', 'Times New Roman';
+ color: black ; 
+ font-style: normal;
+ font-size:1.1em;
+ text-align: justify;
+ margin: auto 5px auto 5px;
+}
+
+.button{
+color:white;
+text-decoration: none;
+background: #62bc62;
+display: inline-block;
+text-align: center;
+margin-left: 410px;
+padding: 10px 10px 10px 10px;
+}
+
+.button:hover{
+background: #8AC007;
+}
+
+.column {
+float: left;
+width: 405px;
+margin-bottom: 25px;
+margin-left: 25px;
+}
+
+.column h3 {
+	padding-right: 5px;
+	font-weight: normal;
+	color: #ff7f1f;
+    font-family: 'Ubuntu' , 'PT Sans', 'sans-serif', 'Arial', 'Times New Roman'  ; 
+    text-align: left;}
+.column p{
+ font-family:  'Abel','Ubuntu' , 'sans-serif', 'Arial', 'Times New Roman';
+ color: black ; 
+ display: block;
+ font-style: normal;
+ font-size:1.1em;
+}   
+
+
+.terms-container {
+font-size: 11px;
+margin: 10px auto 0 auto;
+ font-family:  'Abel','Ubuntu' , 'sans-serif', 'Arial', 'Times New Roman';
+color: #FFF;
+text-align: center;
+}
+
+#newsletter {
+text-align: center;
+margin-bottom: 5px;
+}
+
+#newsletter h3{
+color: black;
+font-size: 14px;
+font-weight: normal;
+ font-family:  'Abel','Ubuntu' , 'sans-serif', 'Arial', 'Times New Roman';
+text-align: center;
+}
+
+#social{
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+
+#button2
+{	
+color:#253FA8;
+background: white ;
+margin-left: 180px;
+padding: 10px 10px 10px 10px;
+}
+
+#button2:hover{
+background: #5671DE;
+}
+
+.logos img{
+	padding: 5px 5px 5px 80px;
+	margin: 5px 5px 5px 5px;
+	display: block;
+}
+
+
+.games{
+color: #FF8000;
+font-family: 'PT Sans', 'Ubuntu' , 'sans-serif', 'Arial', 'Times New Roman';
+padding-top: 50px;
+text-decoration: none;
+text-indent: 39em;
+}
+
+
+table, tr, td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 10px;
+    font-family:  'Abel','Ubuntu' , 'sans-serif', 'Arial', 'Times New Roman';
+ font-style: normal;
+ font-size:15px;
+
+}
+
+th{
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: normal;
+	color: #ff7f1f;
+    margin: 15px 0 15px;
+    font-family: 'Ubuntu' , 'PT Sans', 'sans-serif', 'Arial', 'Times New Roman'  ; 
+    text-align: center;
+    font-size: 20px;
+}
+ 
+tr:nth-child(even) {
+    background: white;
+}
+ 
+tr:nth-child(odd) {
+    background: #cccccc;
+}
+
+
+.order{
+	padding: 50px 50px 50px 50px;
+}
+.order input, .order textarea {
+	padding: 5px;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.4em;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+.order textarea {
+	height: 90px;
+}
+
+
+.submit-button {
+	width: 100px;
+	float: right;
+}
+
+label {
+	float: left;
+	text-align: right;
+	margin-right: 15px;
+	padding-top: 5px;
+	font-size: 1.4em;
+}
