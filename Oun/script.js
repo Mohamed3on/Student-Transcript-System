@@ -21,9 +21,9 @@ function setValues() {
 
 function addCheckbox() {
     var table = document.getElementById("GradesTable");
-    var x = table.rows[1].insertCell(0);
+    var x = document.getElementById("TableHeader").insertCell(0);
     x.innerHTML = "<th>Select</th>";
-    for (i = 2; i < table.rows.length; i++) {
+    for (i = 3; i < table.rows.length; i++) {
         var x = table.rows[i].insertCell(0);
         x.innerHTML = "<input checked='checked'  type='checkbox' class='checkbox' id='checkbox" + i + "'>";
     }
@@ -50,9 +50,8 @@ function CheckCheckedOnClick() {
                 if ($("#checkbox" + i).is(":checked"))
                     $("#modules").append("<li>" + $row + "</li>");
 
+
             }
-
-
         }
     );
 }
@@ -72,23 +71,32 @@ function getAverage() {
         if (count != 0)
             document.getElementById("averageResult").innerHTML = average;
         else
-            document.getElementById("averageResult").innerHTML = "No Courses selected";
+            document.getElementById("averageResult").innerHTML = "No modules selected";
 
     }
 }
 $(document).ready(function () {
+
+    $('#GradesTable').DataTable({"bLengthChange": false,
+        "order": [[ 6, "desc" ]],
+        "info":     false,
+        "paging": false
+    });
+    addCheckbox();
     $("#average").click(function () {
         getAverage();
     });
     $("#selectAll").click(function () {
         $(".checkbox").prop('checked', $(this).prop("checked"));
         CheckChecked();
+        getAverage();
     });
     $("#selectNone").click(function () {
         $('.checkbox').each(function () { //loop through each checkbox
             this.checked = false; //deselect all checkboxes with class "checkbox1"
         });
         CheckChecked();
+        getAverage();
     });
     var table = document.getElementById("GradesTable");
     $(".checkbox").click(function () {
@@ -108,7 +116,6 @@ $(document).ready(function () {
 
 function init() {
     setValues();
-    addCheckbox();
     CheckCheckedOnClick();
     CheckChecked();
     getAverage();
