@@ -120,6 +120,12 @@ input[type=submit] {
     padding: 10px;
 }
 
+#alert{
+    background-color: #C11923;
+    width: 100%;
+    color: white;
+}
+
 
 .column {
 float: left;

@@ -1,6 +1,10 @@
 window.onload = function ()
 {
-    document.getElementById("loginBtn").addEventListener("click",displayLoginDropdown);
+    if(document.getElementById("loginBtn"))
+        document.getElementById("loginBtn").addEventListener("click",displayLoginDropdown);
+    if(document.getElementById("searchAlumniBtn"))
+    document.getElementById("searchAlumniBtn").addEventListener("click",validateSearch);
+
 }
 
 function displayLoginDropdown()
@@ -18,4 +22,15 @@ window.onclick = function(e) {
       }
     }
   }
+}
+
+function validateSearch()
+{
+    var re = /^\d+$/;
+    var x = document.forms["searchAlumni"]["alumName"].value;
+    if (x == null || x == "" || re.test(x) ) 
+    {
+        document.getElementById("alert").innerHTML = "<h2>Invalid Input</h2>";
+        return false;
+    }
 }

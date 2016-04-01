@@ -13,10 +13,11 @@
 		<div id="container">
 	    	<div id="searchBox">
                 <h1>Find what your friends are up to..</h1>
-                <form name="searchAlumni" action="#" method="get">
-                    <input type="search" autofocus autocomplete="on" id="alumName" placeholder="Search by name">
-                    <input type="submit" value="go" class="submit">
+                <form name="searchAlumni" action="#" method="get" onsubmit="return validateSearch();">
+                    <input type="search" autofocus autocomplete="on" id="alumName" placeholder="Search by name" name="alumName">
+                    <input type="submit" value="go" class="submit" id="searchAlumniBtn">
                 </form>
+                <div id="alert"></div>
                 <div id="searchResults"></div>
             </div>
         </div>
