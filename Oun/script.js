@@ -37,8 +37,9 @@ function CheckChecked() {
         if ($("#checkbox" + i).is(":checked")) {
             var $row = $("#checkbox" + i).closest('tr').index();
             $row+=3;
-            var $data=$(table.rows[$row].cells[2]).text();
-            $("#modules").append("<li>" + $data + "</li>");
+            var $data=$(table.rows[$row]);
+            var $final=$data.find(".moduleName").text();
+            $("#modules").append("<li>" + $final + "</li>");
         }
     }
 
@@ -54,7 +55,7 @@ function getAverage() {
             if ($("#checkbox" + i).is(":checked")) {
                 var $row = $("#checkbox" + i).closest('tr').index();
                 $row+=3;
-                var $data=$(table.rows[$row].cells[6]).text();
+                var $data=$(table.rows[$row].cells[5]).text();
                 var num = parseInt($data);
                 count++;
                 sum += num;
@@ -73,28 +74,30 @@ function CheckCheckedOnClick() {
     $(".checkbox").click(function () {
             var table = document.getElementById("GradesTable");
             document.getElementById("modules").innerHTML = "";
-            for (i = 1; i < table.rows.length; i++) {
+        for (i = 1; i < table.rows.length; i++) {
 
-                if ($("#checkbox" + i).is(":checked")) {
-                    var $row = $("#checkbox" + i).closest('tr').index();
-                    $row+=3;
-                    var $data=$(table.rows[$row].cells[2]).text();
-                    $("#modules").append("<li>" + $data + "</li>");
-                }
+            if ($("#checkbox" + i).is(":checked")) {
+                var $row = $("#checkbox" + i).closest('tr').index();
+                $row+=3;
+                var $data=$(table.rows[$row]);
+                var $final=$data.find(".moduleName").text();
+                $("#modules").append("<li>" + $final + "</li>");
             }
+        }
         getAverage();
         }
     );
 }
 
 $(document).ready(function () {
-
+    addCheckbox();
+    $(".details").fadeOut();
     $('#GradesTable').DataTable({"bLengthChange": false,
         "order": [[ 6, "desc" ]],
         "info":     false,
         "paging": false
     });
-    addCheckbox();
+
     $("#selectAll").click(function () {
         $(".checkbox").prop('checked', $(this).prop("checked"));
         CheckChecked();
@@ -107,20 +110,13 @@ $(document).ready(function () {
         CheckChecked();
         getAverage();
     });
-    var table = document.getElementById("GradesTable");
-    $(".checkbox").click(function () {
-            document.getElementById("modules").innerHTML = "";
-            var $modules = document.getElementById("modules");
-            for (i = 1; i < table.rows.length; i++) {
-                var $row = $(table.rows[i].cells[2]).text();
-                if ($("#checkbox" + i).is(":checked"))
-                    $(modules).append("<li>" + $row + "</li>");
+  $(".module").click(function () {
+      var self=$(this);
+      var $details=self.find('.details');
+      if ( $details.is(':visible'))  $details.slideUp();
+     else $details.slideDown();
+  })
 
-            }
-
-
-        }
-    );
 });
 
 function init() {

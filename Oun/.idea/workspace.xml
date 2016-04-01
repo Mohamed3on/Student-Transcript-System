@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2ee7fbb9-2fb2-472e-bcf9-fd610a419376" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Transcript.html" afterPath="$PROJECT_DIR$/Transcript.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tstyles.css" afterPath="$PROJECT_DIR$/Tstyles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script.js" afterPath="$PROJECT_DIR$/script.js" />
     </list>
     <ignored path="Oun.iws" />
@@ -24,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Transcript.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Transcript.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Transcript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="143" column="8" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="8" />
+            <state relative-caret-position="444">
+              <caret line="118" column="92" selection-start-line="118" selection-start-column="92" selection-end-line="118" selection-end-column="92" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -36,27 +37,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="96" column="18" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
+            <state relative-caret-position="216">
+              <caret line="107" column="27" selection-start-line="107" selection-start-column="27" selection-end-line="107" selection-end-column="27" />
               <folding>
                 <element signature="e#0#47#0" expanded="false" />
-                <element signature="n#!!block;n#CheckChecked#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="firstq.html" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Dropbox/Gam3a/Semester 2/IP/firstq.html">
+      <file leaf-file-name="Tstyles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tstyles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="289">
+              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,8 +79,9 @@
         <option value="$USER_HOME$/Dropbox/Gam3a/Semester 2/IP/firstq.html" />
         <option value="$PROJECT_DIR$/styles.css" />
         <option value="$PROJECT_DIR$/header.html" />
-        <option value="$PROJECT_DIR$/script.js" />
         <option value="$PROJECT_DIR$/Transcript.html" />
+        <option value="$PROJECT_DIR$/Tstyles.css" />
+        <option value="$PROJECT_DIR$/script.js" />
       </list>
     </option>
   </component>
@@ -150,8 +149,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
-  <component name="RunManager" selected="Node.js.script.js">
+  <component name="RunManager" selected="JavaScript Debug.Transcript.html">
     <configuration default="false" name="script.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="script.js" working-dir="$PROJECT_DIR$">
+      <method />
+    </configuration>
+    <configuration default="false" name="Transcript.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Oun/Transcript.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -207,12 +209,14 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Node.js.script.js" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.Transcript.html" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.script.js" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Transcript.html" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.script.js" />
       </list>
     </recent_temporary>
   </component>
@@ -233,12 +237,12 @@
       <workItem from="1459434519844" duration="542000" />
       <workItem from="1459435103282" duration="225000" />
       <workItem from="1459435461704" duration="5946000" />
-      <workItem from="1459449188264" duration="11514000" />
+      <workItem from="1459449188264" duration="15757000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39103000" />
+    <option name="totallyTimeSpent" value="43346000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -252,7 +256,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -302,7 +306,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#47#0" expanded="false" />
-            <element signature="n#!!block;n#CheckChecked#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -335,7 +338,6 @@
           <caret line="38" column="104" selection-start-line="38" selection-start-column="104" selection-end-line="38" selection-end-column="104" />
           <folding>
             <element signature="e#0#47#0" expanded="false" />
-            <element signature="n#!!block;n#CheckChecked#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -358,7 +360,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#47#0" expanded="false" />
-            <element signature="n#!!block;n#CheckChecked#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -422,23 +423,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script.js">
+    <entry file="file://$PROJECT_DIR$/Transcript.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="96" column="18" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
+        <state relative-caret-position="444">
+          <caret line="118" column="92" selection-start-line="118" selection-start-column="92" selection-end-line="118" selection-end-column="92" />
           <folding>
-            <element signature="e#0#47#0" expanded="false" />
-            <element signature="n#!!block;n#CheckChecked#0" expanded="false" />
+            <element signature="n#style#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Transcript.html">
+    <entry file="file://$PROJECT_DIR$/Tstyles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="143" column="8" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="8" />
+        <state relative-caret-position="289">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="107" column="27" selection-start-line="107" selection-start-column="27" selection-end-line="107" selection-end-column="27" />
           <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#0#47#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -12,7 +12,15 @@ body {
     padding: 0 10px 0 20px;
 
 }
-
+.details
+{
+    font-family: 'Open Sans';
+    font-size: 13px;
+    font-style: italic;
+    font-variant: normal;
+    color: brown;
+    font-weight: 500;
+}
 #nav {
     top: 0px;
     right: 10px;
