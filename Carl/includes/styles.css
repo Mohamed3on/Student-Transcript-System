@@ -129,3 +129,24 @@ input[type=submit] {
 #sitemap {
     width: 100%;
 }
+
+table, tr, td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 10px;
+    font-family:  'Abel','Ubuntu' , 'sans-serif', 'Arial', 'Times New Roman';
+ font-style: normal;
+ font-size:15px;
+
+}
+
+th{
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: normal;
+	color: #ff7f1f;
+    margin: 15px 0 15px;
+    font-family: 'Ubuntu' , 'PT Sans', 'sans-serif', 'Arial', 'Times New Roman'  ; 
+    text-align: center;
+    font-size: 20px;
+}
