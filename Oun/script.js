@@ -93,9 +93,10 @@ $(document).ready(function () {
     addCheckbox();
     $(".details").fadeOut();
     $('#GradesTable').DataTable({"bLengthChange": false,
-        "order": [[ 6, "desc" ]],
+        "order": [[ 5, "desc" ]],
         "info":     false,
-        "paging": false
+        "paging": false,
+        responsive: true
     });
 
     $("#selectAll").click(function () {
