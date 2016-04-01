@@ -28,9 +28,14 @@ function validateSearch()
 {
     var re = /^\d+$/;
     var x = document.forms["searchAlumni"]["alumName"].value;
-    if (x == null || x == "" || re.test(x) ) 
+    if (x == null || x == "") 
     {
-        document.getElementById("alert").innerHTML = "<h2>Invalid Input</h2>";
+        document.getElementById("alert").innerHTML = "<h2>Name must be filled out.</h2>";
+        return false;
+    }
+    else if(re.test(x))
+    {
+        document.getElementById("alert").innerHTML = "<h2>Input can't be a number.</h2>";
         return false;
     }
 }
