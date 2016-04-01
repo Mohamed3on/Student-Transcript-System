@@ -88,10 +88,8 @@ function CheckCheckedOnClick() {
         }
     );
 }
-
-$(document).ready(function () {
-    addCheckbox();
-    $(".details").fadeOut();
+function events(){
+	  $(".details").fadeOut();
     $('#GradesTable').DataTable({"bLengthChange": false,
         "order": [[ 5, "desc" ]],
         "info":     false,
@@ -118,6 +116,12 @@ $(document).ready(function () {
      else $details.slideDown();
   })
 
+	
+}
+$(document).ready(function () {
+    addCheckbox();
+	events();
+  
 });
 
 function init() {
