@@ -108,6 +108,19 @@ input[type=submit] {
     cursor: pointer;
 }
 
+.dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.show {
+    display: inline-block;
+    padding: 10px;
+}
+
+
 .column {
 float: left;
 width: 405px;
@@ -156,7 +169,6 @@ margin-left: auto;
 margin-right: auto;
 text-align: center;
 }
-
 
 #button2
 {	
