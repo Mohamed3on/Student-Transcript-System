@@ -129,15 +129,20 @@ input[type=submit] {
 #sitemap {
     width: 100%;
 }
+#searchResults {
+    width: 725px;
+    display: none;
+}
 
+    
 table, tr, td {
     border: 1px solid #000;
     border-collapse: collapse;
     padding: 10px;
     font-family:  'Abel','Ubuntu' , 'sans-serif', 'Arial', 'Times New Roman';
- font-style: normal;
- font-size:15px;
-
+    font-style: normal;
+    font-size:15px;
+    margin: auto;
 }
 
 th{

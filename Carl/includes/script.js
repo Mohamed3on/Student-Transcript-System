@@ -38,4 +38,12 @@ function validateSearch()
         document.getElementById("alert").innerHTML = "<h2>Input can't be a number.</h2>";
         return false;
     }
+    else
+    {
+        document.getElementById("alert").innerHTML = "";
+        document.getElementById("searchResults").style.display = "block";
+        document.getElementById("resultName").innerHTML = x;
+
+        return false;
+    }
 }
