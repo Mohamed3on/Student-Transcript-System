@@ -9,7 +9,6 @@ body {
 	background: #eee;
 	border:1px solid #ccc;
 	padding: 0 10px 0 20px;
-
 }
 
 #nav {
@@ -21,11 +20,13 @@ body {
 	border:1px solid #ccc;
 	padding: 0 10px 0 20px;
 }
+
 #nav li {
 	float: left;
 	padding-top: 5px;
 	padding-left:5px; 
 }
+
 #nav li a {
 	font-family: 'PT Sans', 'sans-serif', 'Arial', 'Times New Roman' ;
 	font-style: normal;
@@ -37,8 +38,14 @@ body {
 	font-weight: bold;
 	color: black;
 }
+
 #nav li a:hover {
 	background-color: #084B8C;
+	color: white; 
+}
+
+#nav li #logout:hover {
+	background-color: #C11923;
 	color: white; 
 }
 
@@ -53,7 +60,7 @@ body {
  	display: inline;
 }
 
-#container{
+#container {
 	margin:auto;
 	overflow:auto; 
 	padding:160px 0; 
@@ -67,44 +74,52 @@ body {
 	right:0px;
 	left:0px;
 	position:fixed;
-	}
+}
+
 #footer p {
 	margin: 0;
 	padding: 10px 0;
 }
 
-.title {
-	text-align: center;
-	padding-left: 5px;
-	padding-right: 5px;
-	font-weight: normal;
-	color: #ff7f1f;
-    margin: 15px 0 15px;
+#searchBox h1 {
+    margin:auto;
+	color: #C11923;
     font-family: 'Ubuntu' , 'PT Sans', 'sans-serif', 'Arial', 'Times New Roman'  ; 
 }
 
- .paragraph {
- font-family:  'Abel','Ubuntu' , 'sans-serif', 'Arial', 'Times New Roman';
- color: black ; 
- font-style: normal;
- font-size:1.1em;
- text-align: justify;
- margin: auto 5px auto 5px;
+#alumName {
+    padding: 10px;
+    border: solid 5px #c9c9c9;
+    transition: border 0.3s;
+    width: 80%;
 }
 
-.button{
-color:white;
-text-decoration: none;
-background: #62bc62;
-display: inline-block;
-text-align: center;
-margin-left: 410px;
-padding: 10px 10px 10px 10px;
+#alumName:focus {
+    border: solid 5px #969696;
 }
 
-.button:hover{
-background: #8AC007;
+input[type=submit] {
+    background-color: #084B8C;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
 }
+
+.dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.show {
+    display: inline-block;
+    padding: 10px;
+}
+
 
 .column {
 float: left;
@@ -154,7 +169,6 @@ margin-left: auto;
 margin-right: auto;
 text-align: center;
 }
-
 
 #button2
 {	
