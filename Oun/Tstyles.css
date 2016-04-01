@@ -160,14 +160,23 @@ h1 {
     font-weight: 500;
     line-height: 26.4px;
 }
-
-h3 {
+h2{
     font-family: 'Open Sans';
-    font-size: 14px;
+    font-size: 18px;
     font-style: normal;
     font-variant: normal;
     font-weight: 500;
+    line-height: 18px;
+    color: darkred;
+}
+h3 {
+    font-family: 'Quicksand';
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
     line-height: 15.4px;
+    color: brown;
 }
 
 p {
@@ -182,7 +191,7 @@ p {
 .variable {
     display: inline;
     font-family: 'Open Sans';
-    font-size: 14px;
+    font-size: 13px;
     font-style: normal;
     font-variant: normal;
     font-weight: bold;
@@ -193,10 +202,29 @@ p {
 .userinfo {
     display: inline;
     font-family: 'Open Sans';
-    font-size: 14px;
+    font-size: 13px;
     font-style: normal;
     font-variant: normal;
     font-weight: bold;
     line-height: 20px;
     color: #084B8C;
+}
+
+input[type="button"], input[type="submit"] {
+    background-color: navy;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    transition-duration: 0.4s;
+    border-radius:8px;
+    font-family: 'Quicksand';
+    font-weight: bold;
+}
+
+input[type="button"]:hover, input[type="submit"]:hover {
+    background-color: white;
+    color: navy;
 }
