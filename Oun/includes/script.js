@@ -3,8 +3,8 @@
  */
 //Jquery
 $(function () {
-    $("#header").load("includes/header.html #nav");
-    $("#footer").load("includes/header.html #footer");
+    $("#header").load("../includes/header.html #nav");
+    $("#footer").load("../includes/header.html #footer");
 });
 
 var name = "Mohamed";
