@@ -3,8 +3,8 @@
  */
 var i=0;
 $(function () {
-    $("#header").load("header.html #nav");
-    $("#footer").load("header.html #footer");
+    $("#header").load("includes/header.html #nav");
+    $("#footer").load("includes/header.html #footer");
 });
 function  init() {
     document.getElementById("addModule").onclick = function() {
