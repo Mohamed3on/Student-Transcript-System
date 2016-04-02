@@ -1,5 +1,5 @@
 body {
-    margin: 48px 0px 0px 64px;
+    margin: 48px 0 0 64px;
     background-color: aliceblue;
 }
 
@@ -12,19 +12,20 @@ body {
     padding: 0 10px 0 20px;
 
 }
-.details
-{
-    font-family: 'Open Sans';
+
+.details {
+    font-family: 'Open Sans', Times, serif;
     font-size: 13px;
     font-style: italic;
     font-variant: normal;
     color: brown;
     font-weight: 500;
 }
+
 #nav {
-    top: 0px;
+    top: 0;
     right: 10px;
-    left:10px;
+    left: 10px;
     position: absolute;
     background: #eee;
     border: 1px solid #ccc;
@@ -38,7 +39,7 @@ body {
 }
 
 #nav li a {
-    font-family:'Open Sans';
+    font-family: 'Open Sans', Times, serif;
     font-style: normal;
     font-size: x-large;
     display: inline;
@@ -85,27 +86,27 @@ body {
 }
 
 #footer {
-    padding: 0 10px;
+    padding: 5px;
     background: #EEE;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
+    bottom: 0;
+    right: 0;
+    left: 0;
     position: relative;
 }
 
 #footer p {
     margin: 0;
     padding: 10px 0;
+
 }
 
-.title {
-    text-align: center;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-weight: normal;
-    color: #ff7f1f;
-    margin: 15px 0 15px;
-    font-family: 'Ubuntu', 'PT Sans', 'sans-serif', 'Arial', 'Times New Roman';
+#footer li a {
+    display: inline;
+    font-family: 'Open Sans', Times, serif;
+    font-style: normal;
+    padding-left: 10px;
+    margin: auto;
+    font-weight: bold;
 }
 
 .logos img {
@@ -118,7 +119,7 @@ table, tr, td {
     border: 1px solid #000;
     border-collapse: collapse;
     text-align: center;
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Times, serif;
     padding: 5px;
     font-style: normal;
     font-size: 15px;
@@ -126,42 +127,41 @@ table, tr, td {
     background-color: cornsilk;
 
 }
-li
-{
-    font-family: 'Quicksand';
+
+li {
+    font-family: 'Quicksand', Times, serif;
     font-size: 14px;
     font-style: normal;
     font-variant: normal;
     font-weight: bold;
-    font-weight: 400;
     line-height: 20px;
 }
+
 th {
     border-collapse: collapse;
     margin: auto;
     border: 1px solid black;
     padding-left: 5px;
     padding-right: 5px;
-    font-weight: normal;
     color: #811e00;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', Times, serif;
     background-color: antiquewhite;
-    text-align: justify;
     font-size: 12px;
     font-weight: bold;
     text-align: center;
 }
 
 h1 {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', Times, serif;
     font-size: 24px;
     font-style: normal;
     font-variant: normal;
     font-weight: 500;
-    line-height: 26.4px;
+    line-height: 26px;
 }
-h2{
-    font-family: 'Open Sans';
+
+h2 {
+    font-family: 'Open Sans', Times, serif;
     font-size: 18px;
     font-style: normal;
     font-variant: normal;
@@ -169,18 +169,19 @@ h2{
     line-height: 18px;
     color: darkred;
 }
+
 h3 {
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', Times, serif;
     font-size: 15px;
     font-style: normal;
     font-variant: normal;
     font-weight: bold;
-    line-height: 15.4px;
+    line-height: 15px;
     color: brown;
 }
 
 p {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', Times, serif;
     font-size: 14px;
     font-style: normal;
     font-variant: normal;
@@ -190,7 +191,7 @@ p {
 
 .variable {
     display: inline;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', Times, serif;
     font-size: 13px;
     font-style: normal;
     font-variant: normal;
@@ -201,7 +202,7 @@ p {
 
 .userinfo {
     display: inline;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', Times, serif;
     font-size: 13px;
     font-style: normal;
     font-variant: normal;
@@ -219,8 +220,8 @@ input[type="button"], input[type="submit"] {
     display: inline-block;
     font-size: 14px;
     transition-duration: 0.4s;
-    border-radius:8px;
-    font-family: 'Quicksand';
+    border-radius: 8px;
+    font-family: 'Quicksand', Times, serif;
     font-weight: bold;
 }
 

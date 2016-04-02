@@ -8,7 +8,7 @@
         function userNameCheck(evt) {
             userName = document.getElementById("userName").value;
             if (!/^[a-z0-9]+$/i.test(userName)) {
-                alert("Invalid username.")
+                alert("username.")
                 evt.preventDefault();
                 return false;
             }
