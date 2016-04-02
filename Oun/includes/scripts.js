@@ -6,6 +6,48 @@ $(function () {
     $("#header").load("../includes/header.html #nav");
     $("#footer").load("../includes/header.html #footer");
 });
+function addFinal() {
+    var input = document.createElement("input");
+    $("#modules").append("<div class='variable' >Final: </div><br>");
+    $("#modules").append("<div class='variable' >Mark: </div>");
+    input.type = "number";
+    input.max = 100;
+    input.min = 0;
+    input.className = "finalMark";
+    input.required = false;
+    $("#modules").append(input);
+    $("#modules").append("<br>");
+    $("#modules").append("<div class='variable' >Weight:   </div>");
+    var input2 = document.createElement("input");
+    input2.type = "number";
+    input2.className = "finalWeight";
+    input2.max = 100;
+    input2.min = 0;
+    input2.required = false;
+    $("#modules").append(input2);
+    $("#modules").append("<br>");
+}
+function addCoursework() {
+    var input = document.createElement("input");
+    $("#modules").append("<div class='variable' >Coursework: </div><br>");
+    $("#modules").append("<div class='variable' >Mark: </div>");
+    input.type = "number";
+    input.max = 100;
+    input.min = 0;
+    input.className = "courseworkMark";
+    input.required = false;
+    $("#modules").append(input);
+    $("#modules").append("<br>");
+    $("#modules").append("<div class='variable' >Weight:   </div>");
+    var input2 = document.createElement("input");
+    input2.type = "number";
+    input2.className = "courseworkWeight";
+    input2.max = 100;
+    input2.min = 0;
+    input2.required = false;
+    $("#modules").append(input2);
+    $("#modules").append("<br>");
+}
 function  init() {
     document.getElementById("addModule").onclick = function() {
         i++;
@@ -18,6 +60,7 @@ function  init() {
                 case 1:
 
                     $("#modules").append("<div class='userinfo' >Module Code: </div><br>");
+                    input.className="moduleCode"
                     $("#modules").append(input);
                     $("#modules").append("<br>");
                     break;
@@ -25,10 +68,17 @@ function  init() {
                 case 2:
 
                     $("#modules").append("<div class='userinfo' >Module Name: </div><br>");
+                    input.className = "moduleName"
                     $("#modules").append(input);
                     $("#modules").append("<br>");
                     break;
                 case 3:
+                    $("#modules").append("<div class='userinfo' >Grade details: </div><br>");
+                    addCoursework();
+                     addFinal();
+
+                    break;
+                case 4:
                     var input1 = document.createElement("input");
                     input1.type = "number";
                     input1.required = true;
@@ -36,19 +86,19 @@ function  init() {
                     $("#modules").append(input1);
                     $("#modules").append("<br>");
                     break;
-                case 4:
+                case 5:
 
                     $("#modules").append("<div class='userinfo' >Grade: </div><br>");
                     $("#modules").append(input);
                     $("#modules").append("<br>");
                     break;
-                case 5:
-
+                case 6:
+                    input.type="number";
                     $("#modules").append("<div class='userinfo' >Final Mark (Average): </div><br>");
                     $("#modules").append(input);
                     $("#modules").append("<br>");
                     break;
-                case 6:
+                case 7:
                     var form = document.createElement("form");
                     var option1 =document.createElement("input");
                     var option2 = document.createElement("input");

@@ -88,8 +88,15 @@ function CheckCheckedOnClick() {
         }
     );
 }
+function moduledetails() {
+    var self = $(this);
+    var $details = self.find('.details');
+    if ($details.is(':visible'))  $details.slideUp();
+    else $details.slideDown();
+}
 function events(){
-	  $(".details").fadeOut();
+	  $(".details").hide();
+    $(".dropdown content").fadeOut();
     $('#GradesTable').DataTable({"bLengthChange": false,
         "order": [[ 5, "desc" ]],
         "info":     false,
@@ -109,14 +116,8 @@ function events(){
         CheckChecked();
         getAverage();
     });
-  $(".module").click(function () {
-      var self=$(this);
-      var $details=self.find('.details');
-      if ( $details.is(':visible'))  $details.slideUp();
-     else $details.slideDown();
-  })
+  $(".module").hover(moduledetails, moduledetails)
 
-	
 }
 $(document).ready(function () {
     addCheckbox();
@@ -131,3 +132,11 @@ function init() {
     getAverage();
 
 }
+window.setTimeout(function(){
+    $(".dropdown").click(function () {
+        var self = $(this);
+        var $content = self.find('.dropdown content');
+        if ($content.is(':visible'))  $content.slideUp();
+        else $content.slideDown();
+    })
+}, 1);

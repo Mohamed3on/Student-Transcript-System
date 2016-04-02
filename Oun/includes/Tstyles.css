@@ -38,9 +38,9 @@ body {
 }
 
 #nav li a {
-    font-family: 'PT Sans', 'sans-serif', 'Arial', 'Times New Roman';
+    font-family:'Open Sans';
     font-style: normal;
-    font-size: xx-large;
+    font-size: x-large;
     display: inline;
     padding: 15px 15px 15px 15px;
     float: right;
