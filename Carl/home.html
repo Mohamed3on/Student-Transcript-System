@@ -18,10 +18,10 @@
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn" id="loginBtn">Login</a>
                     <div class="dropdown-content" id="myDropdown">
-                        <form method="post" action="#">
+                        <form method="post" action="#" name="loginForm" onsubmit="return validateLogin()">
                           Username: <input type="text" name="un" id="usernameField"><br>
                           Password: <input type="password" name="password" id="passwordField"><br>
-                          <input type="submit" name="submit" value="Login"><br>
+                          <input type="submit" name="submit" value="Login" id="loginSubmit"><br>
                         </form>
                     </div>
                 </li>

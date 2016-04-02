@@ -4,22 +4,26 @@ window.onload = function ()
         document.getElementById("loginBtn").addEventListener("click",displayLoginDropdown);
     if(document.getElementById("searchAlumniBtn"))
     document.getElementById("searchAlumniBtn").addEventListener("click",validateSearch);
-
+    if(document.getElementById("loginSubmit"))
+        document.getElementById("loginSubmit").addEventListener("click",valideLogin);
 }
 
 function displayLoginDropdown()
 {
   document.getElementById("myDropdown").classList.toggle('show');
 }
+
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn') && !e.target.matches('#usernameField') && !e.target.matches('#passwordField') ) {
+window.onclick = function(e) 
+{
+  if (!e.target.matches('.dropbtn') && !e.target.matches('#usernameField') && !e.target.matches('#passwordField') && !e.target.matches('#loginSubmit')) 
+  {
     var dropdowns = document.getElementsByClassName("dropdown-content");
-    for (var d = 0; d < dropdowns.length; d++) {
+    for (var d = 0; d < dropdowns.length; d++) 
+    {
       var openDropdown = dropdowns[d];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
+      if (openDropdown.classList.contains('show'))
+          openDropdown.classList.remove('show');
     }
   }
 }
@@ -46,4 +50,26 @@ function validateSearch()
 
         return false;
     }
+}
+
+function validateLogin()
+{
+    var re = /^\d+$/;
+    var un = document.forms["loginForm"]["un"].value;
+    var pw = document.forms["loginForm"]["password"].value;
+
+    if (un == null || un == "") 
+    {
+        alert("Username can't be empty.");
+        return false;
+    }
+    
+    else if (pw == null || pw == "") 
+    {
+        alert("Password can't be empty.");
+        return false;
+    }
+
+    else
+        return true;
 }
