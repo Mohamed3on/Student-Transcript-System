@@ -120,92 +120,29 @@ input[type=submit] {
     padding: 10px;
 }
 
-
-.column {
-float: left;
-width: 405px;
-margin-bottom: 25px;
-margin-left: 25px;
+#alert{
+    background-color: #C11923;
+    width: 100%;
+    color: white;
 }
 
-.column h3 {
-	padding-right: 5px;
-	font-weight: normal;
-	color: #ff7f1f;
-    font-family: 'Ubuntu' , 'PT Sans', 'sans-serif', 'Arial', 'Times New Roman'  ; 
-    text-align: left;}
-.column p{
- font-family:  'Abel','Ubuntu' , 'sans-serif', 'Arial', 'Times New Roman';
- color: black ; 
- display: block;
- font-style: normal;
- font-size:1.1em;
-}   
-
-
-.terms-container {
-font-size: 11px;
-margin: 10px auto 0 auto;
- font-family:  'Abel','Ubuntu' , 'sans-serif', 'Arial', 'Times New Roman';
-color: #FFF;
-text-align: center;
+#sitemap {
+    width: 100%;
+}
+#searchResults {
+    width: 725px;
+    display: none;
 }
 
-#newsletter {
-text-align: center;
-margin-bottom: 5px;
-}
-
-#newsletter h3{
-color: black;
-font-size: 14px;
-font-weight: normal;
- font-family:  'Abel','Ubuntu' , 'sans-serif', 'Arial', 'Times New Roman';
-text-align: center;
-}
-
-#social{
-margin-left: auto;
-margin-right: auto;
-text-align: center;
-}
-
-#button2
-{	
-color:#253FA8;
-background: white ;
-margin-left: 180px;
-padding: 10px 10px 10px 10px;
-}
-
-#button2:hover{
-background: #5671DE;
-}
-
-.logos img{
-	padding: 5px 5px 5px 80px;
-	margin: 5px 5px 5px 5px;
-	display: block;
-}
-
-
-.games{
-color: #FF8000;
-font-family: 'PT Sans', 'Ubuntu' , 'sans-serif', 'Arial', 'Times New Roman';
-padding-top: 50px;
-text-decoration: none;
-text-indent: 39em;
-}
-
-
+    
 table, tr, td {
     border: 1px solid #000;
     border-collapse: collapse;
     padding: 10px;
     font-family:  'Abel','Ubuntu' , 'sans-serif', 'Arial', 'Times New Roman';
- font-style: normal;
- font-size:15px;
-
+    font-style: normal;
+    font-size:15px;
+    margin: auto;
 }
 
 th{
@@ -217,42 +154,4 @@ th{
     font-family: 'Ubuntu' , 'PT Sans', 'sans-serif', 'Arial', 'Times New Roman'  ; 
     text-align: center;
     font-size: 20px;
-}
- 
-tr:nth-child(even) {
-    background: white;
-}
- 
-tr:nth-child(odd) {
-    background: #cccccc;
-}
-
-
-.order{
-	padding: 50px 50px 50px 50px;
-}
-.order input, .order textarea {
-	padding: 5px;
-	font-family: Helvetica, sans-serif;
-	font-size: 1.4em;
-	margin: 0px 0px 10px 0px;
-	border: 2px solid #ccc;
-}
-
-.order textarea {
-	height: 90px;
-}
-
-
-.submit-button {
-	width: 100px;
-	float: right;
-}
-
-label {
-	float: left;
-	text-align: right;
-	margin-right: 15px;
-	padding-top: 5px;
-	font-size: 1.4em;
 }
