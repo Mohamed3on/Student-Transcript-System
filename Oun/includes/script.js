@@ -3,8 +3,8 @@
  */
 //Jquery
 $(function () {
-    $("#header").load("header.html #nav");
-    $("#footer").load("header.html #footer");
+    $("#header").load("../includes/header.html #nav");
+    $("#footer").load("../includes/header.html #footer");
 });
 
 var name = "Mohamed";
@@ -88,10 +88,15 @@ function CheckCheckedOnClick() {
         }
     );
 }
-
-$(document).ready(function () {
-    addCheckbox();
-    $(".details").fadeOut();
+function moduledetails() {
+    var self = $(this);
+    var $details = self.find('.details');
+    if ($details.is(':visible'))  $details.slideUp();
+    else $details.slideDown();
+}
+function events(){
+	  $(".details").hide();
+    $(".dropdown content").fadeOut();
     $('#GradesTable').DataTable({"bLengthChange": false,
         "order": [[ 5, "desc" ]],
         "info":     false,
@@ -111,13 +116,13 @@ $(document).ready(function () {
         CheckChecked();
         getAverage();
     });
-  $(".module").click(function () {
-      var self=$(this);
-      var $details=self.find('.details');
-      if ( $details.is(':visible'))  $details.slideUp();
-     else $details.slideDown();
-  })
+  $(".module").hover(moduledetails, moduledetails)
 
+}
+$(document).ready(function () {
+    addCheckbox();
+	events();
+  
 });
 
 function init() {
@@ -127,3 +132,11 @@ function init() {
     getAverage();
 
 }
+window.setTimeout(function(){
+    $(".dropdown").click(function () {
+        var self = $(this);
+        var $content = self.find('.dropdown content');
+        if ($content.is(':visible'))  $content.slideUp();
+        else $content.slideDown();
+    })
+}, 1);

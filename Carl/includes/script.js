@@ -54,7 +54,6 @@ function validateSearch()
 
 function validateLogin()
 {
-    var re = /^\d+$/;
     var un = document.forms["loginForm"]["un"].value;
     var pw = document.forms["loginForm"]["password"].value;
 
