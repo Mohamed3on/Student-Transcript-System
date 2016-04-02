@@ -1,5 +1,0 @@
-TRANSCRIPT SYSTEM
--Show grades correctly for each student
--show average/ranking of each course, semester, year
--show average/ranking of specific group of courses
--show best/worst courses overall between students
