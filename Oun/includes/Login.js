@@ -2,8 +2,8 @@
  * Created by Mohamed Oun on 02-Apr-16.
  */
 $(function () {
-    $("#header").load("../includes/header.html #nav");
-    $("#footer").load("../includes/header.html #footer");
+    $("#header").load("../includes/header.php #nav");
+    $("#footer").load("../includes/header.php #footer");
 });
 function validateUsername() {
     var uName = document.forms["loginForm"]["username"].value;

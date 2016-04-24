@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+session_start();
+$username=$_SESSION['username'];
+$type=$_SESSION['type'];
+
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,7 +20,7 @@
     <hr>
     <div class="verticalLine">
         <h2>Add Student Grades:</h2>
-        <form name="GradesForm" method="post">
+        <form name="GradesForm" action="admin.php" method="post">
             <div class="userinfo"><label>Name:</label> <br>
             </div>
             <input type="text" required="required" autofocus="autofocus" name="nameInput"><br>
@@ -30,7 +36,9 @@
                 <option value="Political Science">Political Science</option>
             </select><br>
             <div class="userinfo"><label>Year:</label> <br></div>
-            <input type="number" min="1900" max="2200" value="2016" required="required" name="yearInput"><br>
+            <input type="number" min="1" max="5"  required="required" name="yearInput"><br>
+            <div class="userinfo"><label>Semester:</label> <br></div>
+            <input type="number" min="1" max="3" required="required" name="semesterInput"><br>
             <div id="modules"></div>
             <div id="buttons" style="text-align: center; margin:auto;">
                 <input type="button" id="addModule" value="Add Module">

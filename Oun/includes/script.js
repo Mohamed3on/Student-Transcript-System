@@ -3,21 +3,10 @@
  */
 //Jquery
 $(function () {
-    $("#header").load("../includes/header.html #nav");
-    $("#footer").load("../includes/header.html #footer");
+    $("#header").load("../includes/header.php #nav");
+    $("#footer").load("../includes/header.php #footer");
 });
 
-var name = "Mohamed Oun";
-var id = 124897, year = "Third Year", faculty = "Computer Science";
-
-function setValues() {
-    if (name != null)
-        document.getElementById("name").innerHTML = name;
-    document.getElementById("ID").innerHTML = id.toString();
-    document.getElementById("year").innerHTML = year;
-    document.getElementById("faculty").innerHTML = faculty;
-
-}
 
 function addCheckbox() {
     var table = document.getElementById("GradesTable");
@@ -92,6 +81,11 @@ function moduledetails() {
     var self = $(this);
     var $details = self.find('.details');
     $details.slideToggle();
+}
+function  getTranscript() {
+    if ($type=="admin" )
+        return "../admin/AdminTranscript.php";
+    else return "../user/Transcript.php";
 }
 function events() {
     $(".details").hide();

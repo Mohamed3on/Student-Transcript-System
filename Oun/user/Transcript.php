@@ -1,4 +1,29 @@
 <!DOCTYPE html>
+<?php
+session_start();
+$connect=@mysql_connect('localhost','root','');
+if (!$connect)
+{
+    die("database connection went kaboom" . mysql_error());
+
+}
+$mydb=mysql_select_db('studentgrades');
+if(!$mydb)
+{
+    die("could not select database :" . mysql_error());
+}
+$id=$_SESSION['id'];
+$query="SELECT * FROM `student` WHERE ID='$id'";
+$result= mysql_query($query);
+$check=mysql_num_rows($result);
+if ($check==1) {
+    $row = mysql_fetch_row($result);
+    $name = $row[1];
+    $year=$row[2];
+    $semester=$row[3];
+    $faculty=$row[4];
+}
+?>
 <html lang="en">
 <meta charset="UTF-8">
     <title>UK Transcript</title>
@@ -15,24 +40,24 @@
     <div class="verticalLine">
         <h1 style="text-decoration: underline ">UK Transcript</h1>
         <div class="variable">Name:</div>
-        <div class="userinfo" id="name"></div>
+        <div class="userinfo" id="name"><?php echo $name?></div>
         <br>
         <div class="variable">ID:</div>
-        <div class="userinfo" id="ID"></div>
+        <div class="userinfo" id="ID"><?php echo $id?></div>
         <br>
         <div class="variable">Year:</div>
-        <div class="userinfo" id="year"></div>
+        <div class="userinfo" id="year"><?php echo $year?></div>
         <br>
         <div class="variable">Faculty:</div>
-        <div class="userinfo" id="faculty"></div>
+        <div class="userinfo" id="faculty"><?php echo $faculty?></div>
         <br><br>
         <table class="gradesTable order-column" id="GradesTable">
             <thead>
             <tr id="degreeYear">
-                <th colspan="7">Year 2</th>
+                <th colspan="7">Year <?php echo $year?></th>
             </tr>
             <tr id="semester">
-                <th colspan="7">Semester 1</th>
+                <th colspan="7">Semester <?php echo $semester?></th>
             </tr>
             <tr id="TableHeader">
                 <th>Module Code</th>

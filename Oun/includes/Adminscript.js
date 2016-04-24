@@ -3,8 +3,9 @@
  */
 var i = 0;
 $(function () {
-    $("#header").load("../includes/header.html #nav");
-    $("#footer").load("../includes/header.html #footer");
+    
+    $("#header").load("../includes/header.php #nav");
+    $("#footer").load("../includes/header.php #footer");
 });
 function addFinal() {
     var input = document.createElement("input");
@@ -49,6 +50,11 @@ function addCoursework() {
     input2.required = false;
    m.append(input2);
    m.append("<br>");
+}
+function  getTranscript() {
+    if ($type=="admin" )
+        return "../admin/AdminTranscript.php";
+    else return "../user/Transcript.php";
 }
 function validateName() {
     var sName = document.forms["GradesForm"]["nameInput"].value;
