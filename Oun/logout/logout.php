@@ -7,7 +7,6 @@
  */
 Session_start();
 Session_destroy();
-$_SESSION['loggedin'] = false;
 header('Location:../login/Login.html');
 
 ?>

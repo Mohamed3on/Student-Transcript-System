@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <?php
 session_start();
-$username=$_SESSION['username'];
-$type=$_SESSION['type'];
+function checkValidity(){
+  if (!isset($_SESSION['loggedin'])) {header('Location:../login/Login.html');}
+    $type=$_SESSION['type'];
+    if ($type=="student") header("Location:../user/Transcript.php");
 
+}
+checkValidity();
 ?>
 <html lang="en">
 <head>

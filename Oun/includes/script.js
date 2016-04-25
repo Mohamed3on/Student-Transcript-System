@@ -12,7 +12,7 @@ function addCheckbox() {
     var table = document.getElementById("GradesTable");
     var x = document.getElementById("TableHeader").insertCell(0);
     x.innerHTML = "<th>Select</th>";
-    for (var i = 3; i < table.rows.length; i++) {
+    for (var i = 1; i < table.rows.length; i++) {
         var y = table.rows[i].insertCell(0);
         y.innerHTML = "<input checked='checked'  type='checkbox' class='checkbox' id='checkbox" + i + "'>";
     }
@@ -25,7 +25,7 @@ function CheckChecked() {
 
         if ($("#checkbox" + i).is(":checked")) {
             var $row = $("#checkbox" + i).closest('tr').index();
-            $row += 3;
+            $row += 1;
             var $data = $(table.rows[$row]);
             var $final = $data.find(".moduleName").text();
             $("#modules").append("<li>" + $final + "</li>");
@@ -43,7 +43,7 @@ function getAverage() {
 
             if ($("#checkbox" + i).is(":checked")) {
                 var $row = $("#checkbox" + i).closest('tr').index();
-                $row += 3;
+                $row += 1;
                 var $data = $(table.rows[$row].cells[5]).text();
                 var num = parseInt($data);
                 count++;
@@ -67,7 +67,7 @@ function CheckCheckedOnClick() {
 
                 if ($("#checkbox" + i).is(":checked")) {
                     var $row = $("#checkbox" + i).closest('tr').index();
-                    $row += 3;
+                    $row += 1;
                     var $data = $(table.rows[$row]);
                     var $final = $data.find(".moduleName").text();
                     $("#modules").append("<li>" + $final + "</li>");
@@ -120,7 +120,6 @@ $(document).ready(function () {
 });
 
 function init() {
-    setValues();
     CheckCheckedOnClick();
     CheckChecked();
     getAverage();
