@@ -8,7 +8,7 @@ $id = $_SESSION['id'];
 function CheckValidity()
 {
     //check if user has right priviliges
-   if (!isset($_SESSION['loggedin'])) {
+    if (!isset($_SESSION['loggedin'])) {
         header('Location:../login/Login.html');
     }
     $type = $_SESSION['type'];
@@ -16,19 +16,21 @@ function CheckValidity()
         header("Location:../admin/AdminTranscript.php");
     }
 }
-function CheckGrade($mark){
+
+function CheckGrade($mark)
+{
     if ($mark >= 77) $grade = "A+";
-    else if($mark >=74 &&$mark <77)  $grade = "A";
-    else if($mark >=70 &&$mark <74)  $grade = "A-";
-    else if($mark >=67 &&$mark <70)  $grade = "B+";
-    else if($mark >=64 &&$mark <67)  $grade = "B";
-    else if($mark >=60 &&$mark <64)  $grade = "B-";
-    else if($mark >=57 &&$mark <60)  $grade = "C+";
-    else if($mark >=54 &&$mark <57)  $grade = "C";
-    else if($mark >=50 &&$mark <54)  $grade = "C-";
-    else if($mark >=47 &&$mark <50)  $grade = "D+";
-    else if($mark >=44 &&$mark <47)  $grade = "D";
-    else if($mark >=40 &&$mark <44)  $grade = "D-";
+    else if ($mark >= 74 && $mark < 77) $grade = "A";
+    else if ($mark >= 70 && $mark < 74) $grade = "A-";
+    else if ($mark >= 67 && $mark < 70) $grade = "B+";
+    else if ($mark >= 64 && $mark < 67) $grade = "B";
+    else if ($mark >= 60 && $mark < 64) $grade = "B-";
+    else if ($mark >= 57 && $mark < 60) $grade = "C+";
+    else if ($mark >= 54 && $mark < 57) $grade = "C";
+    else if ($mark >= 50 && $mark < 54) $grade = "C-";
+    else if ($mark >= 47 && $mark < 50) $grade = "D+";
+    else if ($mark >= 44 && $mark < 47) $grade = "D";
+    else if ($mark >= 40 && $mark < 44) $grade = "D-";
     else $grade = "F";
     return $grade;
 }
