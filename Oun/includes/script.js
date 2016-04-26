@@ -82,11 +82,7 @@ function moduledetails() {
     var $details = self.find('.details');
     $details.slideToggle();
 }
-function  getTranscript() {
-    if ($type=="admin" )
-        return "../admin/AdminTranscript.php";
-    else return "../user/Transcript.php";
-}
+
 function events() {
     $(".details").hide();
     $(".dropdown content").fadeOut();
