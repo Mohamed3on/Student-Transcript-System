@@ -16,7 +16,7 @@ function DatabaseConnect()
 
 function login()
 {
-    $username = $_POST['username'];
+    $username = strtolower($_POST['username']);
     $password = $_POST['password'];
     $query = "SELECT * FROM `login` WHERE username='$username' and password='$password'";
     $result = mysql_query($query);
