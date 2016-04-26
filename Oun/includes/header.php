@@ -25,6 +25,9 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] = true) {
         <li>
             <a href='../Home/Home.php'>Home</a>
         </li>
+        <li style="display: inline">
+            <a href= <?php echo $transcript; ?>> Transcript</a>
+        </li>
         <li>
             <a href=<?php echo $loginpage ?>><?php echo $login ?></a>
         </li>

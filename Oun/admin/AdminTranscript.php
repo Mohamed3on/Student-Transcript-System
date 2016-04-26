@@ -23,16 +23,25 @@ checkValidity();
 <div id="Tcontainter">
     <hr>
     <div class="verticalLine">
-        <h2>Add Student Grades:</h2>
-        <form name="GradesForm" action="admin.php" method="post">
+        <h2>Student Grades Operations:</h2>
+        <form name="addGrade" action="addGrade.php" method="post">
+            <h3>Add Grade: </h3>
+            <hr>
             <div class="userinfo"><label>Student ID:</label> <br>
             </div>
             <input type="text" required="required" name="idInput"><br>
-            <div id="modules"></div>
-            <div id="buttons" style="text-align: center; margin:auto;">
-                <input type="button" id="addModule" value="Add Module">
-                <input type=submit id="submitForm" value="Submit grades">
+            <div class="modules" id="add"></div>
+            <br> <input style="text-align: center; margin:auto;" type=submit id="addGrade" value="Add Grade">
+
+        </form>
+        <form name="deleteGrade" action="deleteGrade.php" method="post">
+            <h3>Delete Grade: </h3>
+            <hr>
+            <div class="userinfo"><label>Student ID:</label> <br>
             </div>
+            <input type="text" required="required" name="idInput"><br>
+            <div class="modules"></div>
+            <br> <input style="text-align: center; margin:auto;" type=submit id="deleteGrade" value="Delete Grade">
 
         </form>
 
