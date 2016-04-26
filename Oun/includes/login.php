@@ -41,4 +41,3 @@ function login()
 
 DatabaseConnect();
 login();
-?>

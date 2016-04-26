@@ -6,7 +6,7 @@ $(function () {
     $("#header").load("../includes/header.php #nav");
     $("#footer").load("../includes/header.php #footer");
 });
-function addFinal() {
+function addFinalAdd() {
     var input = document.createElement("input");
     var m = $("#add");
     m.append("<div class='variable' >Final Mark: </div><br>");
@@ -14,41 +14,102 @@ function addFinal() {
     input.max = 100;
     input.min = 0;
     input.name = "finalMark";
-    input.required = false;
+    input.value = 0;
     m.append(input);
     m.append("<br>");
+}
+function addFinalUpdate() {
+    var input = document.createElement("input");
+    var u = $("#update");
+    u.append("<div class='variable' >Final Mark: </div><br>");
+    input.type = "number";
+    input.max = 100;
+    input.min = 0;
+    input.name = "finalMark";
+    input.value = 0;
+    u.append(input);
+    u.append("<br>");
+}
+function addFinal() {
+    addFinalAdd();
+    addFinalUpdate();
 
 }
-function addCoursework() {
+function addCourseWorkAdd() {
     var input = document.createElement("input");
     var m = $("#add");
-    {
-        m.append("<div class='userinfo' >Grade details: </div><br>");
-        m.append("<div class='variable' >Coursework Mark: </div><br>");
-        input.type = "number";
-        input.max = 100;
-        input.min = 0;
-        input.name = "courseworkMark";
-        input.required = false;
-        m.append(input);
-        m.append("<br>");
+    m.append("<div class='userinfo' >Grade details: </div><br>");
+    m.append("<div class='variable' >Coursework Mark: </div><br>");
+    input.type = "number";
+    input.max = 100;
+    input.min = 0;
+    input.name = "courseworkMark";
+    input.value = 0;
+    m.append(input);
+    m.append("<br>");
+}
+function addCourseWorkUpdate() {
+    var input = document.createElement("input");
+    var u = $("#update");
+    u.append("<div class='userinfo' >Grade details: </div><br>");
+    u.append("<div class='variable' >Coursework Mark: </div><br>");
+    input.type = "number";
+    input.max = 100;
+    input.min = 0;
+    input.name = "courseworkMark";
+    input.value = 0;
+    u.append(input);
+    u.append("<br>");
+}
+function addCoursework() {
+    addCourseWorkAdd();
+    addCourseWorkUpdate();
+
+}
+
+function validateAddModuleCode() {
+    var module = document.forms["addGrade"]["moduleCode"].value;
+    var good = true;
+
+    if (!/^[a-zA-Z0-9]+$/.test(module)) {
+        module.style.borderColor = 'red';
+        good = false;
+    }
+    else {
+        module.style.borderColor = 'green';
     }
 
 
+    return good;
 }
-
-function validateModuleCode() {
+function validateDeleteModuleCode() {
+    var module = document.forms["deleteGrade"]["moduleCode"].value;
     var good = true;
-    $('.moduleCode').each(function (i, obj) {
-            if (!/^[a-zA-Z0-9]+$/.test(obj.value)) {
-                obj.style.borderColor = 'red';
-                good = false;
-            }
-            else {
-                obj.style.borderColor = 'green';
-            }
-        }
-    );
+
+    if (!/^[a-zA-Z0-9]+$/.test(module)) {
+        module.style.borderColor = 'red';
+        good = false;
+    }
+    else {
+        module.style.borderColor = 'green';
+    }
+
+
+    return good;
+}
+function validateUpdateModuleCode() {
+    var module = document.forms["updateGrade"]["moduleCode"].value;
+    var good = true;
+
+    if (!/^[a-zA-Z0-9]+$/.test(module)) {
+        module.style.borderColor = 'red';
+        good = false;
+    }
+    else {
+        module.style.borderColor = 'green';
+    }
+
+
     return good;
 }
 
@@ -78,9 +139,22 @@ function validateDeleteID() {
         return true;
     }
 }
+function validateUpdateID() {
+    var id = document.forms["updateGrade"]["idInput"].value;
+    if (!/^[0-9]+$/i.test(id)) {
+        var textbox = $("[name='idInput']");
+        textbox.css('border-color', 'red');
+        return false;
+    }
+    else {
+        var textbox = $("[name='idInput']");
+        textbox.css('border-color', 'green');
+        return true;
+    }
+}
 function validateAddForm(event) {
 
-    if (validateAddID() && validateModuleCode()) return true;
+    if (validateAddID() && validateAddModuleCode()) return true;
     else {
         alert("Please check red boxes");
         event.preventDefault();
@@ -90,7 +164,17 @@ function validateAddForm(event) {
 }
 function validateDeleteForm(event) {
 
-    if (validateDeleteID() && validateModuleCode()) return true;
+    if (validateDeleteID() && validateDeleteModuleCode()) return true;
+    else {
+        alert("Please check red boxes");
+        event.preventDefault();
+        return false;
+    }
+
+}
+function validateUpdateForm(event) {
+
+    if (validateUpdateID() && validateUpdateModuleCode()) return true;
     else {
         alert("Please check red boxes");
         event.preventDefault();
@@ -133,5 +217,7 @@ function addModule() {
 function init() {
     document.getElementById("addGrade").addEventListener("click", validateAddForm);
     document.getElementById("deleteGrade").addEventListener("click", validateDeleteForm);
+    document.getElementById("updateGrade").addEventListener("click", validateUpdateForm);
+
     addModule();
 }

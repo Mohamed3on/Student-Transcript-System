@@ -24,6 +24,7 @@ function validateIDs()
     $check = mysql_num_rows($result);
     if ($check < 1) {
         echo "the Student ID isn't registered in the database<br>";
+        header("refresh:2;url=AdminTranscript.php");
         return false;
     }
     $query = "SELECT ID FROM `course` WHERE ID='$courseID'";
@@ -31,6 +32,7 @@ function validateIDs()
     $check = mysql_num_rows($result);
     if ($check < 1) {
         echo "the Course ID isn't registered in the database<br>";
+        header("refresh:2;url=AdminTranscript.php");
         return false;
     }
     return true;
@@ -60,4 +62,3 @@ DatabaseConnect();
 addGrade();
 
 
-?>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 session_start();
-if (isset($_SESSION['type'])){
+if (isset($_SESSION['type'])) {
     $type = $_SESSION['type'];
 }
 
@@ -35,10 +35,10 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] = true) {
 <header id="header"></header>
 <div id="container">
     <div class="box" style=" float:left; ">
-        <h1> <a href= <?php echo $transcript; ?>> Transcript</a></h1>
+        <h1><a href= <?php echo $transcript; ?>> Transcript</a></h1>
     </div>
     <div class="box" style=" float:right;">
-        <h1> <a href= <?php echo $loginpage; ?>> <?php echo $login; ?></a></h1>
+        <h1><a href= <?php echo $loginpage; ?>> <?php echo $login; ?></a></h1>
     </div>
 
 

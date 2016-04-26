@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <?php
 session_start();
-function checkValidity(){
-  if (!isset($_SESSION['loggedin'])) {header('Location:../login/Login.html');}
-    $type=$_SESSION['type'];
-    if ($type=="student") header("Location:../user/Transcript.php");
+function checkValidity()
+{
+    if (!isset($_SESSION['loggedin'])) {
+        header('Location:../login/Login.html');
+    }
+    $type = $_SESSION['type'];
+    if ($type == "student") header("Location:../user/Transcript.php");
 
 }
+
 checkValidity();
 ?>
 <html lang="en">
@@ -42,6 +46,16 @@ checkValidity();
             <input type="text" required="required" name="idInput"><br>
             <div class="modules"></div>
             <br> <input style="text-align: center; margin:auto;" type=submit id="deleteGrade" value="Delete Grade">
+
+        </form>
+        <form name="updateGrade" action="updateGrade.php" method="post">
+            <h3>Update Grade: </h3>
+            <hr>
+            <div class="userinfo"><label>Student ID:</label> <br>
+            </div>
+            <input type="text" required="required" name="idInput"><br>
+            <div class="modules" id="update"></div>
+            <br> <input style="text-align: center; margin:auto;" type=submit id="updateGrade" value="Update Grade">
 
         </form>
 
