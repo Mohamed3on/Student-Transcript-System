@@ -25,24 +25,9 @@ checkValidity();
     <div class="verticalLine">
         <h2>Add Student Grades:</h2>
         <form name="GradesForm" action="admin.php" method="post">
-            <div class="userinfo"><label>Name:</label> <br>
-            </div>
-            <input type="text" required="required" autofocus="autofocus" name="nameInput"><br>
-            <div class="userinfo"><label>ID:</label> <br>
+            <div class="userinfo"><label>Student ID:</label> <br>
             </div>
             <input type="text" required="required" name="idInput"><br>
-            <div class="userinfo"><label>Faculty:</label> <br>
-            </div>
-            <select name="facultyInput">
-                <option selected="selected" value="ICS">ICS</option>
-                <option value="Engineering">Engineering</option>
-                <option value="Pharmacy">Pharmacy</option>
-                <option value="Political Science">Political Science</option>
-            </select><br>
-            <div class="userinfo"><label>Year:</label> <br></div>
-            <input type="number" min="1" max="5"  required="required" name="yearInput"><br>
-            <div class="userinfo"><label>Semester:</label> <br></div>
-            <input type="number" min="1" max="3" required="required" name="semesterInput"><br>
             <div id="modules"></div>
             <div id="buttons" style="text-align: center; margin:auto;">
                 <input type="button" id="addModule" value="Add Module">

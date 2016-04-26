@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <?php
 session_start();
+$name = "";
+$year = "";
+$faculty = "";
+$id = $_SESSION['id'];
 function CheckValidity()
 {
-   
+    //check if user has right priviliges
    if (!isset($_SESSION['loggedin'])) {
         header('Location:../login/Login.html');
     }
@@ -28,29 +32,54 @@ function CheckGrade($mark){
     else $grade = "F";
     return $grade;
 }
-$connect = @mysql_connect('localhost', 'root', '');
-if (!$connect) {
-    die("database connection went kaboom" . mysql_error());
 
+function DatabaseConnect()
+{
+    $connect = @mysql_connect('localhost', 'root', '');
+    if (!$connect) {
+        die("database connection went kaboom" . mysql_error());
+
+    }
+    $mydb = mysql_select_db('studentgrades');
+    if (!$mydb) {
+        die("could not select database :" . mysql_error());
+    }
 }
-$mydb = mysql_select_db('studentgrades');
-if (!$mydb) {
-    die("could not select database :" . mysql_error());
+
+function userinfo()
+{
+    $MyID = $GLOBALS['id'];
+    $query = "SELECT * FROM `student` WHERE ID='$MyID'";
+    $result = mysql_query($query);
+    $check = mysql_num_rows($result);
+    if ($check == 1) {
+        $row = mysql_fetch_row($result);
+        $GLOBALS['name'] = $row[1];
+        $GLOBALS['year'] = $row[2];
+        $GLOBALS['faculty'] = $row[3];
+    }
 }
-$id = $_SESSION['id'];
-$query = "SELECT * FROM `student` WHERE ID='$id'";
-$result = mysql_query($query);
-$check = mysql_num_rows($result);
-if ($check == 1) {
-    $row = mysql_fetch_row($result);
-    $name = $row[1];
-    $year = $row[2];
-    $faculty = $row[3];
+
+function getGrades()
+{
+    $id = $GLOBALS['id'];
+    //query to get grades with inner join and calculated columns
+    $sql = "SELECT CourseID, course.Name,course.ModuleCredits, (`CourseworkMark`*course.CourseworkWeight/100 + FinalMark*course.FinalWeight/100),grades.CourseworkMark,grades.FinalMark,course.Year,course.Semester FROM grades INNER JOIN course ON grades.CourseID=course.ID WHERE grades.StudentID='$id'";
+    $result = mysql_query($sql);
+    $numrow = 1;
+    while ($row = mysql_fetch_row($result)) {
+        $grade = CheckGrade($row[3]);
+        if ($row[3] > 40) $passed = "Yes"; else $passed = "No";
+        print("<tr id=" . $numrow . "><td>" . $row[0] . "</td> <td class=\"module\"><div class=\"moduleName\">" . $row[1] . "</div> <div class=\"details\">Coursework " . $row[4] . "<br>Final " . $row[5] . "<br></div></td><td>" . $row[2] . "</td><td>" . $grade . "</td><td>" . round($row[3]) . "</td><td>" . $passed . "</td><td>" . $row[6] . "</td><td>" . $row[7] . "</td></tr>");
+        $numrow++;
+    }
+
 }
 
 
 CheckValidity();
-
+DatabaseConnect();
+userinfo();
 
 ?>
 
@@ -97,16 +126,7 @@ CheckValidity();
             </thead>
             <tbody>
             <?php
-            $sql = "SELECT CourseID, course.Name,course.ModuleCredits, (`CourseworkMark`*course.CourseworkWeight/100 + FinalMark*course.FinalWeight/100),grades.CourseworkMark,grades.FinalMark,course.Year,course.Semester FROM grades INNER JOIN course ON grades.CourseID=course.ID WHERE grades.StudentID='$id'";
-            $result = mysql_query($sql);
-            $numrow = 1;
-            while ($row = mysql_fetch_row($result)) {
-                $grade=CheckGrade($row[3]);
-                if ($row[3] > 40) $passed = "Yes"; else $passed = "No";
-                print("<tr id=" . $numrow . "><td>" . $row[0] . "</td> <td class=\"module\"><div class=\"moduleName\">" . $row[1] . "</div> <div class=\"details\">Coursework ".$row[4]."<br>Final ".$row[5]."<br></div></td><td>" . $row[2] . "</td><td>" . $grade . "</td><td>" . round($row[3]) . "</td><td>" . $passed ."</td><td>".$row[6]."</td><td>".$row[7]. "</td></tr>");
-                $numrow++;
-            }
-
+            getGrades();
             ?>
 
             </tbody>
